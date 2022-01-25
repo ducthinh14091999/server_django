@@ -23,4 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('predict/', views.predict_view, name='product'),
     path('success', views.success, name = 'success'),
+    path('',views.main_page, name="main_page"),
+    path('last_result/',views.previous_result,name= 'result'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

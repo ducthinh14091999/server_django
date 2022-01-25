@@ -30,6 +30,8 @@ def predict_view(request):
             # print(height,width)
             img=cv2.imread('uploads/img.jpg')
             stri=predict_test(img)
+            with open('result.txt','w',encoding='utf-8') as w:
+                w.write(stri)
             return render(request,'myapp/result.html',{'stri':stri})
     else:
         form = UploadFileForm()
@@ -38,3 +40,12 @@ def predict_view(request):
   
 def success(request):
     return HttpResponse('successfully uploaded')
+def main_page(request):
+    if request.method == 'POST':
+        pass
+    else:
+        pass
+    return render(request, 'myapp/main.html')
+def previous_result(request):
+    stri = open('result.txt','r',encoding='utf-8').readline()
+    return render(request,'myapp/last_result.html',{'stri':stri})

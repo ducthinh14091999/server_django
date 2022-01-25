@@ -3,13 +3,13 @@ import glob
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from keras.models import Model
-from keras.layers import LSTM,Dense, Dropout, Activation, Flatten,BatchNormalization
-from keras.layers import Conv2D, MaxPooling2D, Bidirectional
-from keras.layers import Reshape, Lambda,Input
-from keras import backend as K
-from keras.models import load_model
-from keras.layers.merge import add, concatenate
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import LSTM,Dense, Dropout, Activation, Flatten,BatchNormalization
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Bidirectional
+from tensorflow.keras.layers import Reshape, Lambda,Input
+from tensorflow.keras import backend as K
+from tensorflow.keras.models import load_model
+# from tensorflow.keras.layers.merge import add, concatenate
 # from google.colab.patches import cv2_imshow
 
 alphabet = " !"+'"'+"#&'()*+,-./0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"+'àáảãạâầấẩẫậăằắẳẵặèéẻẽẹêềếểễệđìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵÀÁẢÃẠÂẦẤẨẪẬĂẰẮẲẴẶÈÉẺẼẸÊỀẾỂỄỆĐÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴÂĂĐÔƠƯ\t_[]{}@\\<>'
@@ -58,7 +58,7 @@ input_length = Input(name='input_length', shape=[1], dtype='int64')     # (None,
 label_length = Input(name='label_length', shape=[1], dtype='int64')     # (None, 1)
 
 model=Model(inputs=inputs,outputs=y_pred)
-model.load_weights('F:/de_cuong/project_2/New_folder/word_overfit 1.h5')
+model.load_weights('word_overfit 1.h5')
 print(model.summary())
 def main():
     list_img=glob.glob('F:/de_cuong/project_2/New_folder/segment_line3/*.jpg')
