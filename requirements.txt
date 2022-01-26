@@ -3,3 +3,9 @@ numpy==             1.19.3
 opencv-python==     4.5.3.56
 tensorflow-cpu==        2.2.0
 django == 3.0
+whitenoise==5.2.0
+dj-database-url==0.5.0
+Django==3.0.9
+gunicorn==20.0.4
+psycopg2==2.8.5
+pytz==2020.1
