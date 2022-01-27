@@ -1,6 +1,6 @@
 Keras==             2.3.1
 numpy==             1.19.3
-opencv-python==     4.5.3.56
+opencv-python==     3.4.0.12
 tensorflow-cpu==        2.2.0
 django == 3.0
 whitenoise==5.2.0
