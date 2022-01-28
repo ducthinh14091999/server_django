@@ -58,7 +58,7 @@ input_length = Input(name='input_length', shape=[1], dtype='int64')     # (None,
 label_length = Input(name='label_length', shape=[1], dtype='int64')     # (None, 1)
 
 model=Model(inputs=inputs,outputs=y_pred)
-model.load_weights('word_overfit 1.h5')
+# model.load_weights('word_overfit 1.h5')
 print(model.summary())
 def main():
     list_img=glob.glob('F:/de_cuong/project_2/New_folder/segment_line3/*.jpg')
